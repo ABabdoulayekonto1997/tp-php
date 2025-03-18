@@ -1,12 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Accueil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Responsive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Header Responsive</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body>
+    <header class="bg-white shadow-lg fixed top-0 left-0 right-0 z-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+            
+            <!-- Logo -->
+            <div class="text-black text-3xl font-bold flex items-center space-x-2">
+                <a href="#"><img class="w-32" src="img/bibliothèques.png" alt="Logo"></a>
+            </div>
     
+            <!-- Recherche (Desktop) -->
+            <div class="w-full max-w-sm hidden sm:block">
+                <div class="relative">
+                    <!-- Champ de recherche -->
+                    <input type="text" placeholder="Rechercher..." class="w-full p-3 pl-12 pr-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ease-in-out shadow-sm focus:shadow-lg" />
+                    
+                    <!-- Icône de recherche -->
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-4 4m0 0l-4-4m4 4V3"></path>
+                    </svg>
+                </div>
+            </div>
+        
+            <!-- Boutons de connexion -->
+            <div class="space-x-4">
+                <a href="#" class="text-white bg-orange-500 px-6 py-3 rounded-lg font-medium hover:bg-orange-400 transition duration-200 ease-in-out transform hover:scale-105">Inscription</a>
+                <a href="#" class="text-white bg-[#312783] border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-[#312783] transition duration-200 ease-in-out transform hover:scale-105">Connexion</a>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu (Hamburger) -->
+        <div class="sm:hidden flex justify-between items-center mt-4">
+            <button class="text-black text-3xl hover:text-orange-500 transition duration-300" id="hamburger-btn">&#9776;</button>
+        </div>
+    
+        <!-- Mobile Search (Visible only when hamburger is clicked) -->
+        <div id="mobile-search" class="sm:hidden hidden mt-4">
+            <input type="text" placeholder="Rechercher..." class="w-full p-3 rounded-md border border-gray-300" />
+        </div>
+    </header>
+    
+    <!-- Contenu principal -->
+    <div class="pt-16"> <!-- Ajoute un padding top pour éviter que le contenu soit caché sous le header -->
+        <!-- Ton contenu ici -->
+         
+    </div>
+    
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- Titre de la bannière -->
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                Bienvenue dans votre bibliothèque en ligne
+            </h1>
+            <p class="text-lg md:text-xl mb-8">
+                Découvrez une vaste collection de livres et de ressources à portée de main, 
+                et enrichissez votre expérience de lecture en ligne.
+            </p>
+            
+            <!-- Boutons d'action -->
+            <div class="space-x-4">
+                <a href="#explore" class="bg-orange-500 px-6 py-3 rounded-lg text-white font-medium hover:bg-orange-400 transition duration-300 ease-in-out transform hover:scale-105">
+                    Explorer
+                </a>
+                <a href="#about" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg text-white font-medium hover:bg-white hover:text-blue-800 transition duration-300 ease-in-out transform hover:scale-105">
+                    Découvrir
+                </a>
+            </div>
+        </div>
+    
+        <!-- Image de fond (avec positionnement en arrière-plan) -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('img/baniere.jpg');"></div>
+    </section>
+    
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- Titre -->
+            <section class="bg-gray-100 py-16">
+                <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+                    <!-- Contenu texte (à gauche) -->
+                    <div class="w-full md:w-1/2 text-left">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                            Qui sommes-nous ?
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Nous sommes une bibliothèque en ligne dédiée à offrir un accès facile et rapide à une large sélection de livres, 
+                            articles et ressources éducatives. Que vous soyez passionné de littérature, étudiant ou professionnel, 
+                            notre plateforme vous permet de découvrir et d'explorer des œuvres de qualité, tout en enrichissant vos connaissances. 
+                            Notre mission est de rendre la lecture et l'apprentissage accessibles à tous, partout et à tout moment.
+                        </p>
+                    </div>
+            
+                    <!-- Image (à droite) -->
+                    <div class="w-full md:w-1/2">
+                        <img src="img/young-student-learning-library.jpg" alt="Bibliothèque" class="w-full h-auto rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Valeurs -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-12">
+                <!-- Accessibilité -->
+                <div class="flex flex-col items-center shadow-lg p-6 rounded-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-12 h-12 text-[#312783] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 8v4l3 3"/>
+                        <path d="M12 12h8"/>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-800">Accessibilité</h3>
+                    <p class="text-gray-500 mt-2">Accédez à des milliers de ressources éducatives et culturelles en ligne.</p>
+                </div>
+    
+                <!-- Diversité -->
+                <div class="flex flex-col items-center shadow-lg p-6 rounded-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-12 h-12 text-[#312783] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 8v4l3 3"/>
+                        <path d="M12 12h8"/>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-800">Diversité</h3>
+                    <p class="text-gray-500 mt-2">Explorez une variété de genres et de sujets, adaptés à tous les goûts et besoins.</p>
+                </div>
+    
+                <!-- Convivialité -->
+                <div class="flex flex-col items-center shadow-lg p-6 rounded-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-12 h-12 text-[#312783] mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 8v4l3 3"/>
+                        <path d="M12 12h8"/>
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-800">Convivialité</h3>
+                    <p class="text-gray-500 mt-2">Une interface simple et intuitive pour une navigation fluide et agréable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+   
+
+    <script src="js/script.js"></script>
 </body>
 </html>
